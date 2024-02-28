@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Giải thuật sắp xếp Cocktail</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+    integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link rel="short icon" href="./assets/img/Can_Tho_University_Logo.png">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+      </nav>
+    </div>
+  </header>
+  <section id="hero" class="hero">
+    <div class="info d-flex align-items-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2 data-aos="fade-down"><span>Fundamental Thesis of Software Engineering</span></h2>
+            <p data-aos="fade-up" style="font-size: 20px; color: aqua;"><B>Introduction to Cocktail Sort Algorithm</B>
+            </p>
+            <p data-aos="fade-up" style="font-size: 16px;"><b style="color: aqua;">Thuật toán sắp xếp Cocktail</b> là một cải tiến của <b
+                style="color: aqua;">thuật toán sắp xếp nổi bọt (Bubble Sort).</b>
+              Tên thuật toán này được đặt theo cách thức hoạt động của nó là <b style="color: aqua;">"làm nóng và lắc"</b>, tương
+              tư như cách pha chế món Cocktail. Khi pha chế một món Cocktail, người pha chế sẽ cho các nguyên liệu
+              và trong một chiếc shaker và lắc đều để các thành phần hòa quyện với nhau. Tương tự, thuật toán hoạt động
+              bằng cách <b style="color: aqua;">"làm nóng" danh sách từ đầu tới cuối</b>, rồi <b style="color: aqua;">"lắc" danh sách từ cuối lên đầu</b> để đưa phần tử lớn
+              nhất về cuối dãy và
+              phần tử nhỏ nhất về đầu dãy. Lặp đi lặp lại tới khi thuật toán được sắp xếp hoàn chỉnh. <b style="color: #f36464;">Tuy nhiên, tên gọi
+              này chỉ là hình tượng
+              mô tả chứ không phải thao tác chính xác của thuật toán.</b></p>
+            <p data-aos="fade-up" style="color: aqua;"><b>Click here or scroll down to get started</b></p>
+            <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started">Start</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel-1.jpg)">
+      </div>
+      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel-2.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel-3.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel-4.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel-5.jpg)"></div>
+      <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+    </div>
+  </section>
+  <main id="main">
+    <section id="get-started" class="get-started section-bg">
+      <section class="typeNumber">
+        <p style="padding-top: 4px; margin: 0;"><b>Enter the number of elements to be sorted here:</b> <input type="number"
+            id="quantity" placeholder="Enter a number greater than 0" onkeypress="return runScript(event)" onkeyup="createInput()"
+            value="">
+        </p>
+        <!-- <p style="padding-top: 4px; margin: 0;"><input type="checkbox" name="" id="checkbox_type"> Nhập dữ liệu đầu vào
+          (Nếu muốn <b>tạo tự động</b>, không cần chọn mục này)</i></p> -->
+        <div class="type_data" id="data_sort"></div>
+        <p style="padding-top: 4px; margin: 0;"><b class="fileInfo">If you want to input from a file, please do it here:</b> <i class="fa-solid fa-circle-info"
+            title="Nội dung tập tin phải gồm 2 dòng, dòng đầu chứa số phần tử cần sắp xếp. Dòng 2 chứa lần lượt các số cần sắp xếp (Cách nhau bởi khoảng trắng)">
+          </i> <input type="file" name="" id="uploadFile">
+        </p>
+        <p id="output"></p>
+        <p style="color: yellow; padding-top: 4px; margin: -15px;" class="note">When the user <b><u>does not input anything,</u></b>,
+          the system defaults the number of elements to be sorted to 
+          <b>15</b> values
+        </p>
+      </section>
+      <section class="data-container" id="container">
+        <div class="data-space" id="space_sort">
+        </div>
+      </section>
+      <div class="message" id="messageDes">Các tiến trình so sánh và dữ liệu sẽ được hiện nhanh tại đây!</div>
+      <div class="controlButton" style="margin: auto; width: fit-content; padding-bottom: 45px;">
+        <button class="btn1 button-19" onclick="tableSetup(), checkQuantity()" id="Button1"
+          title="Tạo lại dãy số mới">
+          <i class="fa-solid fa-arrows-rotate"></i>
+        </button>
+        <button class="btn1-1 button-19" onclick="tableSetup(), checkFile(), checkData(), checkQuantity();" id="Button1-1"
+          title="Nhập vào dãy số mới">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <button class="btn2 button-19" onclick="tableSetup(),CocktailSort()" id="Button2"
+          title="Chạy chương trình">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button class="btn5 button-19" id="Button5"
+          title="Tạm dừng"><i class="fa-solid fa-stop"></i></button>
+        <button class="btn6 button-19" onclick="del(); checkFile()" id="Button6" title="Xóa"><i
+            class="fa-solid fa-trash"></i></button>
+        <button class="btn7 button-19" id="Button7"
+          title="Tiếp tục"><i class="fa-solid fa-paper-plane"></i></button>
+        <button class="btn8 button-19" onclick="openNav()" id="Button8" title="Hiện bảng"><i
+            class="fa-solid fa-code"></i></button>
+        <input type="range" min="50" max="1000" step="10" value="50" id="timeout-slider">
+        <span>Speed: </span>
+        <span id="range-value">50</span>
+        <span>ms</span>
+      </div>
+    </section>
+    <div class="sidenav" id="mySidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNavigation()">&times;</a>
+      <div class="content">
+        <p class="code1" id="cd1">do</p>
+        <p class="code2" id="cd2" style="padding-left: 15px;">swapped := false</p>
+        <p class="code3" id="cd3" style="padding-left: 15px;">for each i in 0 to length(A) - 2 do</p>
+        <p class="code4" id="cd4" style="padding-left: 30px;">if A[i] > A[i+1] then</p>
+        <p class="code5" id="cd5" style="padding-left: 45px;">swap(A[i], A[i+1])</p>
+        <p class="code6" id="cd6" style="padding-left: 45px;">swapped := true;</p>
+        <p class="code7" id="cd7" style="padding-left: 15px;">if swapped = false then</p>
+        <p class="code8" id="cd8" style="padding-left: 30px;">break do-while loop;</p>
+        <p class="code9" id="cd9" style="padding-left: 15px;">swapped := false</p>
+        <p class="code10" id="cd10" style="padding-left: 15px;">for each i in length(A) - 2 down to 0 do</p>
+        <p class="code11" id="cd11" style="padding-left: 30px;">if A[i] > A[i+1] then</p>
+        <p class="code12" id="cd12" style="padding-left: 45px;">swap(A[i], A[i+1])</p>
+        <p class="code13" id="cd13" style="padding-left: 45px;">swapped := true;</p>
+        <p class="code14" id="cd14">while swapped;</p>
+      </div>
+    </div>
+  </main>
+  <footer id="footer" class="footer">
+    <div class="footer_logo">
+      <a href="https://www.ctu.edu.vn/" target="_blank">
+        <img src="./assets/img/Can_Tho_University_Logo.png" alt="" class="footer_image2">
+      </a>
+    </div>
+    <div class="footer_information">
+      <p><b>© Can Tho University - College of Information and Communication Technology</b></p>
+      <p>Fundamental Thesis Topic of <b>Software Engineering</b></p>
+      <p>Performed by student: <b>Nguyen Cong Dat</b></p>
+      <p>Student ID: <b>B2012076</b></p>
+    </div>
+  </footer>
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+  <script src="./script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"
+    integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"
+    integrity="sha512-S/H9RQ6govCzeA7F9D0m8NGfsGf0/HjJEiLEfWGaMCjFzavo+DkRbYtZLSO+X6cZsIKQ6JvV/7Y9YMaYnSGnAA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.6/swiper-bundle.min.js"
+    integrity="sha512-s/ili339Sh6gM9omfUC6fRwZPU6MPcGJxvDqlbBzPcFcD649iqeO96YQr3VKj/jZSMd2/T9Qr2mp2w4DyCIOPQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
